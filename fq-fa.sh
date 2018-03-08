@@ -14,7 +14,7 @@ read HEADER
 #NAME=$2 #name the output fasta file
 #HEADER=$3
 
-grep -A 1 "^$HEADER" $FILE | grep -v "\-\-" | sed -E 's/($HEADER)/>\1/' | sed 's/ /_/' > $NAME
+grep -A 1 "^$HEADER" $FILE | grep -v "\-\-" | sed -E "s/($HEADER)/>\1/" | sed "s/ /_/" > $NAME
 
 SEQS=`grep -c "^>" $NAME
 
