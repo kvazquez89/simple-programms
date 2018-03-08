@@ -1,3 +1,0 @@
-#Taking note, haven't learn how to create a *.sh programm.
-
-grep -A 1 "^@GWN" pop1.fastq | grep -v "\-\-" | sed -E 's/(@GWNJ)/>\1/' | sed 's/ /_/' > pop1.fasta
